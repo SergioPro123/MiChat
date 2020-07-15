@@ -20,11 +20,15 @@ $(document).ready(function() {
                 if (result.ok) {
                     //Ahora procedemos a logearnos
                     login(data);
+                    $('#errorRegistro').text('');
+                } else {
+                    $('#errorRegistro').text('Hubo un error, intente nuevamente.');
                 }
             },
             error: function(e) {
                 // log error in browser
-                console.log(e.message);
+                console.log(e);
+                $('#errorRegistro').text('Hubo un error, intente nuevamente.');
             }
         });
     });

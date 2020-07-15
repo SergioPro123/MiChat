@@ -1,6 +1,6 @@
 let revisarError = (err, res, data) => {
     if (err) {
-        return res.status(400).json({
+        return res.json({
             ok: false,
             err
         });
